@@ -1,0 +1,2 @@
+class OfferSetting < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: offer_product) do |form| %>
+  <% if offer_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(offer_product.errors.count, "error") %> prohibited this offer_product from being saved:</h2>
+
+      <ul>
+        <% offer_product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.number_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_area :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

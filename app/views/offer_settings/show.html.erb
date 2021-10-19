@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @offer_setting.offer_id %>
+</p>
+
+<p>
+  <strong>Button color:</strong>
+  <%= @offer_setting.button_color %>
+</p>
+
+<p>
+  <strong>Button font:</strong>
+  <%= @offer_setting.button_font %>
+</p>
+
+<p>
+  <strong>Button border:</strong>
+  <%= @offer_setting.button_border %>
+</p>
+
+<p>
+  <strong>Button font size:</strong>
+  <%= @offer_setting.button_font_size %>
+</p>
+
+<p>
+  <strong>Button margin top:</strong>
+  <%= @offer_setting.button_margin_top %>
+</p>
+
+<p>
+  <strong>Button margin bottom:</strong>
+  <%= @offer_setting.button_margin_bottom %>
+</p>
+
+<%= link_to 'Edit', edit_offer_setting_path(@offer_setting) %> |
+<%= link_to 'Back', offer_settings_path %>
