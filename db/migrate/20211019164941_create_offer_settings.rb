@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateOfferSettings < ActiveRecord::Migration[6.1]
   def change
     create_table :offer_settings, id: :uuid do |t|

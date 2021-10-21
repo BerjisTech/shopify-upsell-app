@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class StatsController < ApplicationController
-  before_action :set_stat, only: %i[ show edit update destroy ]
+  before_action :set_stat, only: %i[show edit update destroy]
 
   # GET /stats or /stats.json
   def index
@@ -7,8 +9,7 @@ class StatsController < ApplicationController
   end
 
   # GET /stats/1 or /stats/1.json
-  def show
-  end
+  def show; end
 
   # GET /stats/new
   def new
@@ -16,8 +17,7 @@ class StatsController < ApplicationController
   end
 
   # GET /stats/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /stats or /stats.json
   def create
@@ -25,7 +25,7 @@ class StatsController < ApplicationController
 
     respond_to do |format|
       if @stat.save
-        format.html { redirect_to @stat, notice: "Stat was successfully created." }
+        format.html { redirect_to @stat, notice: 'Stat was successfully created.' }
         format.json { render :show, status: :created, location: @stat }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class StatsController < ApplicationController
   def update
     respond_to do |format|
       if @stat.update(stat_params)
-        format.html { redirect_to @stat, notice: "Stat was successfully updated." }
+        format.html { redirect_to @stat, notice: 'Stat was successfully updated.' }
         format.json { render :show, status: :ok, location: @stat }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,19 +51,20 @@ class StatsController < ApplicationController
   def destroy
     @stat.destroy
     respond_to do |format|
-      format.html { redirect_to stats_url, notice: "Stat was successfully destroyed." }
+      format.html { redirect_to stats_url, notice: 'Stat was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_stat
-      @stat = Stat.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def stat_params
-      params.require(:stat).permit(:shop, :offer_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_stat
+    @stat = Stat.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def stat_params
+    params.require(:stat).permit(:shop, :offer_id)
+  end
 end

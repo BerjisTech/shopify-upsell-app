@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class OfferSettingsController < ApplicationController
-  before_action :set_offer_setting, only: %i[ show edit update destroy ]
+  before_action :set_offer_setting, only: %i[show edit update destroy]
 
   # GET /offer_settings or /offer_settings.json
   def index
@@ -7,8 +9,7 @@ class OfferSettingsController < ApplicationController
   end
 
   # GET /offer_settings/1 or /offer_settings/1.json
-  def show
-  end
+  def show; end
 
   # GET /offer_settings/new
   def new
@@ -16,8 +17,7 @@ class OfferSettingsController < ApplicationController
   end
 
   # GET /offer_settings/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /offer_settings or /offer_settings.json
   def create
@@ -25,7 +25,7 @@ class OfferSettingsController < ApplicationController
 
     respond_to do |format|
       if @offer_setting.save
-        format.html { redirect_to @offer_setting, notice: "Offer setting was successfully created." }
+        format.html { redirect_to @offer_setting, notice: 'Offer setting was successfully created.' }
         format.json { render :show, status: :created, location: @offer_setting }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class OfferSettingsController < ApplicationController
   def update
     respond_to do |format|
       if @offer_setting.update(offer_setting_params)
-        format.html { redirect_to @offer_setting, notice: "Offer setting was successfully updated." }
+        format.html { redirect_to @offer_setting, notice: 'Offer setting was successfully updated.' }
         format.json { render :show, status: :ok, location: @offer_setting }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,19 +51,21 @@ class OfferSettingsController < ApplicationController
   def destroy
     @offer_setting.destroy
     respond_to do |format|
-      format.html { redirect_to offer_settings_url, notice: "Offer setting was successfully destroyed." }
+      format.html { redirect_to offer_settings_url, notice: 'Offer setting was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_offer_setting
-      @offer_setting = OfferSetting.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def offer_setting_params
-      params.require(:offer_setting).permit(:offer_id, :button_color, :button_font, :button_border, :button_font_size, :button_margin_top, :button_margin_bottom)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_offer_setting
+    @offer_setting = OfferSetting.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def offer_setting_params
+    params.require(:offer_setting).permit(:offer_id, :button_color, :button_font, :button_border, :button_font_size,
+                                          :button_margin_top, :button_margin_bottom)
+  end
 end

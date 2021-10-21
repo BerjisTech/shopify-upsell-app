@@ -1,45 +1,47 @@
-require "application_system_test_case"
+# frozen_string_literal: true
+
+require 'application_system_test_case'
 
 class StatsTest < ApplicationSystemTestCase
   setup do
     @stat = stats(:one)
   end
 
-  test "visiting the index" do
+  test 'visiting the index' do
     visit stats_url
-    assert_selector "h1", text: "Stats"
+    assert_selector 'h1', text: 'Stats'
   end
 
-  test "creating a Stat" do
+  test 'creating a Stat' do
     visit stats_url
-    click_on "New Stat"
+    click_on 'New Stat'
 
-    fill_in "Offer", with: @stat.offer_id
-    fill_in "Shop", with: @stat.shop
-    click_on "Create Stat"
+    fill_in 'Offer', with: @stat.offer_id
+    fill_in 'Shop', with: @stat.shop
+    click_on 'Create Stat'
 
-    assert_text "Stat was successfully created"
-    click_on "Back"
+    assert_text 'Stat was successfully created'
+    click_on 'Back'
   end
 
-  test "updating a Stat" do
+  test 'updating a Stat' do
     visit stats_url
-    click_on "Edit", match: :first
+    click_on 'Edit', match: :first
 
-    fill_in "Offer", with: @stat.offer_id
-    fill_in "Shop", with: @stat.shop
-    click_on "Update Stat"
+    fill_in 'Offer', with: @stat.offer_id
+    fill_in 'Shop', with: @stat.shop
+    click_on 'Update Stat'
 
-    assert_text "Stat was successfully updated"
-    click_on "Back"
+    assert_text 'Stat was successfully updated'
+    click_on 'Back'
   end
 
-  test "destroying a Stat" do
+  test 'destroying a Stat' do
     visit stats_url
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on 'Destroy', match: :first
     end
 
-    assert_text "Stat was successfully destroyed"
+    assert_text 'Stat was successfully destroyed'
   end
 end

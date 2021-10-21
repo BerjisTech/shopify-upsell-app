@@ -1,5 +1,6 @@
-// Load all the channels within this directory and all subdirectories.
-// Channel files must be named *_channel.js.
+// Action Cable provides the framework to deal with WebSockets in Rails.
+// You can generate new channels where WebSocket features live using the `rails generate channel` command.
 
-const channels = require.context('.', true, /_channel\.js$/)
-channels.keys().forEach(channels)
+import { createConsumer } from "@rails/actioncable"
+
+export default createConsumer()
