@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class OfferSettingsController < ApplicationController
+class OfferSettingsController < AuthenticatedController
   before_action :set_offer_setting, only: %i[show edit update destroy]
 
   # GET /offer_settings or /offer_settings.json

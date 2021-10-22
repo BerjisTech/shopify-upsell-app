@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class OfferProductsController < ApplicationController
+class OfferProductsController < AuthenticatedController
   before_action :set_offer_product, only: %i[show edit update destroy]
 
   # GET /offer_products or /offer_products.json

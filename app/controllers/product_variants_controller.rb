@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ProductVariantsController < ApplicationController
+class ProductVariantsController < AuthenticatedController
   before_action :set_product_variant, only: %i[show edit update destroy]
 
   # GET /product_variants or /product_variants.json

@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     var validLoadPath = data && data.loadPath;
     var shouldRedirect = false;
 
-    switch(isInitialRedirect) {
+    switch (isInitialRedirect) {
       case true:
         shouldRedirect = validLoadPath;
         break;

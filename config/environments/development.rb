@@ -8,6 +8,11 @@ Rails.application.configure do
   rescue StandardError
     []
   end << /\w+\.ngrok\.io/
+  config.hosts = begin
+    config.hosts
+  rescue StandardError
+    []
+  end << /\w+\.ngrok\.io/
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
