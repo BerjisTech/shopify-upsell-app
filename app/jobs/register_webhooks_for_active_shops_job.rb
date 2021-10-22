@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-Copy
 class RegisterWebhooksForActiveShops < ApplicationJob
   queue_as :default
+
   def perform
     register_webhooks_for_active_shops
   end

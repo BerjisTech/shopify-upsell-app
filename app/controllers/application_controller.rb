@@ -1,4 +1,11 @@
 # frozen_string_literal: true
 
-class HomeController < AuthenticatedController
+class ApplicationController < ActionController::Base
+  before_action :set_host
+
+  private
+
+  def set_host
+    @host = params[:host]
+  end
 end

@@ -1,4 +1,4 @@
-var eventName = typeof (Turbolinks) !== 'undefined' ? 'turbolinks:load' : 'DOMContentLoaded';
+var eventName = typeof(Turbolinks) !== 'undefined' ? 'turbolinks:load' : 'DOMContentLoaded';
 
 if (!document.documentElement.hasAttribute("data-turbolinks-preview")) {
   document.addEventListener(eventName, function flash() {
