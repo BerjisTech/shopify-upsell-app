@@ -20,5 +20,7 @@ if (!document.documentElement.hasAttribute("data-turbolinks-preview")) {
         isError: true,
       }).dispatch(Toast.Action.SHOW);
     }
+
+    document.removeEventListener(eventName, flash)
   });
 }
