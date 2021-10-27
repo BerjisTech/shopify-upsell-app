@@ -70,18 +70,15 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bindex (0.8.1)
     bootsnap (1.9.1)
       msgpack (~> 1.0)
     browser_sniffer (1.2.2)
     builder (3.2.4)
     byebug (11.1.3)
-    capybara (3.35.3)
+    capybara (3.36.0)
       addressable
+      matrix
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
       rack (>= 1.6.0)
@@ -90,14 +87,9 @@ GEM
       xpath (~> 3.2)
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
-    connection_pool (2.2.5)
     crass (1.0.6)
-    dotenv (2.7.6)
-    dotenv-rails (2.7.6)
-      dotenv (= 2.7.6)
-      railties (>= 3.2)
+    dot_env (0.0.3)
     erubi (1.10.0)
-    execjs (2.8.1)
     faraday (1.8.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -120,9 +112,6 @@ GEM
     ffi (1.15.4)
     globalid (0.5.2)
       activesupport (>= 5.0)
-    graphiql-rails (1.8.0)
-      railties
-      sprockets-rails
     graphql (1.12.17)
     graphql-client (0.17.0)
       activesupport (>= 3.0)
@@ -142,6 +131,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.14.4)
@@ -215,17 +205,10 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    react-rails (2.6.1)
-      babel-transpiler (>= 0.7.0)
-      connection_pool
-      execjs
-      railties (>= 3.2)
-      tilt
     redirect_safely (1.0.0)
       activemodel
     regexp_parser (2.1.1)
     rexml (3.2.5)
-    rollbar (3.2.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -238,7 +221,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (4.0.0)
+    selenium-webdriver (4.0.3)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
@@ -276,10 +259,10 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (4.7.0)
+    webdrivers (5.0.0)
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
-      selenium-webdriver (> 3.141, < 5.0)
+      selenium-webdriver (~> 4.0)
     webpacker (5.4.3)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
@@ -291,7 +274,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.2)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   x86_64-linux
@@ -300,20 +283,16 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
-  dotenv-rails
-  graphiql-rails
-  graphql
+  dot_env
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.1)
-  react-rails
-  rollbar
   sass-rails (>= 6)
   selenium-webdriver
-  shopify_app (~> 18.0)
+  shopify_app
   spring
   turbolinks (~> 5)
   tzinfo-data
@@ -325,4 +304,4 @@ RUBY VERSION
    ruby 3.0.1p64
 
 BUNDLED WITH
-   2.2.28
+   2.2.30
