@@ -1,32 +1,18 @@
-# frozen_string_literal: true
-
 ShopifyApp.configure do |config|
-  config.application_name = 'Sleek Upsell'
-  config.old_secret = ''
-  config.scope = 'read_products' # Consult this page for more scope options:
-  # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
+  config.application_name = "My Shopify App"
+  config.api_key = ENV['SHOPIFY_API_KEY']
+  config.secret = ENV['SHOPIFY_API_SECRET']
+  config.old_secret = ""
+  config.scope = "read_products" # Consult this page for more scope options:
+                                 # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
+  config.reauth_on_access_scope_changes = true
   config.embedded_app = true
   config.after_authenticate_job = false
-  config.api_version = '2021-10'
+  config.api_version = "2020-04"
   config.shop_session_repository = 'Shop'
-
-  config.reauth_on_access_scope_changes = true
-
   config.allow_jwt_authentication = true
-  config.allow_cookie_authentication = false
-
-  config.api_key = ENV.fetch('SHOPIFY_API_KEY', '').presence
-  config.secret = ENV.fetch('SHOPIFY_API_SECRET', '').presence
-  if defined? Rails::Server
-    raise('Missing SHOPIFY_API_KEY. See https://github.com/Shopify/shopify_app#requirements') unless config.api_key
-    raise('Missing SHOPIFY_API_SECRET. See https://github.com/Shopify/shopify_app#requirements') unless config.secret
-
-    config.webhooks = [
-      { topic: 'app/uninstalled', address: 'https://sleekupsell.com/webhooks/app_uninstalled', format: 'json' }
-    ]
-  end
   config.webhooks = [
-    { topic: 'app/uninstalled', address: 'https://sleekupsell.com/webhooks/app_uninstalled', format: 'json' }
+    {topic: 'app/uninstalled', address: "#{ENV['APP_URL']}/webhooks/app_uninstalled", format: 'json'},
   ]
 end
 

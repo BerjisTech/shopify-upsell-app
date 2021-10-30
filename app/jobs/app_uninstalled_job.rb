@@ -1,15 +1,13 @@
-# frozen_string_literal: true
-
 class AppUninstalledJob < ActiveJob::Base
-  def perform(shop_domain:, webhook:)
-    shop = Shop.find_by(shopify_domain: shop_domain)
+  def perform(args)
+    shop = Shop.find_by(shopify_domain: args[:shop_domain])
 
-    if shop.nil?
-      logger.error("#{self.class} failed: cannot find shop with domain '#{shop_domain}'")
-      return
-    end
+    mark_shop_as_uninstalled(shop)
+  end
 
-    shop.with_shopify_session do
-    end
+  private
+
+  def mark_shop_as_uninstalled(shop)
+    shop.uninstall! if shop
   end
 end

@@ -32,6 +32,7 @@
       load_path: params[:return_to] || home_path,
       debug: Rails.env.development?
     } ) %>
+
     <% if content_for?(:javascript) %>
       <div id="ContentForJavascript" data-turbolinks-temporary>
         <%= yield :javascript %>

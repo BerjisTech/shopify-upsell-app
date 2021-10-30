@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   root to: 'splash_page#index'
   get '/home', to: 'home#index', as: :home
