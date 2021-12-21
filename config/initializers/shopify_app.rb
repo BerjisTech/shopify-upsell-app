@@ -1,19 +1,24 @@
 ShopifyApp.configure do |config|
-  config.application_name = "My Shopify App"
-  config.api_key = ENV['SHOPIFY_API_KEY']
-  config.secret = ENV['SHOPIFY_API_SECRET']
+  config.application_name = "Sleek Upsell"
   config.old_secret = ""
-  config.scope = "read_products" # Consult this page for more scope options:
-                                 # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
-  config.reauth_on_access_scope_changes = true
+  config.scope = ENV.fetch('DEV_SCOPES', '').presence # Consult this page for more scope options:
+                                  # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
   config.embedded_app = true
   config.after_authenticate_job = false
-  config.api_version = "2020-04"
+  config.api_version = "2021-10"
   config.shop_session_repository = 'Shop'
+
+  config.reauth_on_access_scope_changes = true
+
   config.allow_jwt_authentication = true
-  config.webhooks = [
-    {topic: 'app/uninstalled', address: "#{ENV['APP_URL']}/webhooks/app_uninstalled", format: 'json'},
-  ]
+  config.allow_cookie_authentication = false
+
+  config.api_key = ENV.fetch('SHOPIFY_API_KEY', '').presence
+  config.secret = ENV.fetch('SHOPIFY_API_SECRET', '').presence
+  if defined? Rails::Server
+    raise('Missing SHOPIFY_API_KEY. See https://github.com/Shopify/shopify_app#requirements') unless config.api_key
+    raise('Missing SHOPIFY_API_SECRET. See https://github.com/Shopify/shopify_app#requirements') unless config.secret
+  end
 end
 
 # ShopifyApp::Utils.fetch_known_api_versions                        # Uncomment to fetch known api versions from shopify servers on boot

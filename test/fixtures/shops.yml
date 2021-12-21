@@ -1,7 +1,3 @@
 regular_shop:
   shopify_domain: 'regular-shop.myshopify.com'
   shopify_token: 'token'
-
-second_shop:
-  shopify_domain: 'second-shop.myshopify.com'
-  shopify_token: 'token2'
