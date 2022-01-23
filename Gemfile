@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 gem 'dotenv-rails'
 gem 'rubocop'
-gem 'shopify_app'
+gem 'shopify_api'
 gem 'htmlbeautifier'
 
 # Reduces boot times through caching; required in config/boot.rb
