@@ -125,6 +125,7 @@ GEM
       activesupport (>= 3.0)
       graphql (~> 1.10)
     hashie (5.0.0)
+    htmlbeautifier (1.4.1)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -308,6 +309,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   dotenv-rails
+  htmlbeautifier
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
