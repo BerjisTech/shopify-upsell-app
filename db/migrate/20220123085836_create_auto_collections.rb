@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateAutoCollections < ActiveRecord::Migration[6.1]
   def change
     create_table :auto_collections do |t|

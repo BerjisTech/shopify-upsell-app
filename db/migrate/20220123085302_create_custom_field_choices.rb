@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCustomFieldChoices < ActiveRecord::Migration[6.1]
   def change
     create_table :custom_field_choices do |t|

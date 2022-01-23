@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 ShopifyApp.configure do |config|
-  config.application_name = "My Shopify App"
-  config.old_secret = ""
+  config.application_name = 'My Shopify App'
+  config.old_secret = ''
   config.scope = ENV.fetch('DEV_SCOPES', '').presence # Consult this page for more scope options:
-                                  # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
+  # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
   config.embedded_app = true
   config.after_authenticate_job = false
-  config.api_version = "2022-01"
+  config.api_version = '2022-01'
   config.shop_session_repository = 'Shop'
 
   config.reauth_on_access_scope_changes = true

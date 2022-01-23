@@ -1,1 +1,3 @@
-json.array! @offer_variants, partial: "offer_variants/offer_variant", as: :offer_variant
+# frozen_string_literal: true
+
+json.array! @offer_variants, partial: 'offer_variants/offer_variant', as: :offer_variant
