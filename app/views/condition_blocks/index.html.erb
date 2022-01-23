@@ -16,9 +16,9 @@
       <tr>
         <td><%= condition_block.offer_id %></td>
         <td><%= condition_block.rule %></td>
-        <td><%= link_to 'Show', condition_block %></td>
-        <td><%= link_to 'Edit', edit_condition_block_path(condition_block) %></td>
-        <td><%= link_to 'Destroy', condition_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', "#{condition_block}?#{@params}" %></td>
+        <td><%= link_to 'Edit', "#{edit_condition_block_path(condition_block)}?#{@params}" %></td>
+        <td><%= link_to 'Destroy', "#{condition_block}?#{@params}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Condition Block', new_condition_block_path %>
+<%= link_to 'New Condition Block', "#{new_condition_block_path}?#{@params}" %>

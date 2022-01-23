@@ -2,5 +2,5 @@
 
 <%= render 'form', condition_block: @condition_block %>
 
-<%= link_to 'Show', @condition_block %> |
-<%= link_to 'Back', condition_blocks_path %>
+<%= link_to 'Show', "#{@condition_block}?#{@params}" %> |
+<%= link_to 'Back', "#{condition_blocks_path}?#{@params}" %>

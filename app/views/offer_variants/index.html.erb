@@ -18,9 +18,9 @@
         <td><%= offer_variant.offer_id %></td>
         <td><%= offer_variant.product %></td>
         <td><%= offer_variant.variant %></td>
-        <td><%= link_to 'Show', offer_variant %></td>
-        <td><%= link_to 'Edit', edit_offer_variant_path(offer_variant) %></td>
-        <td><%= link_to 'Destroy', offer_variant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', "#{offer_variant}?#{@params}" %></td>
+        <td><%= link_to 'Edit', "#{edit_offer_variant_path(offer_variant)}?#{@params}" %></td>
+        <td><%= link_to 'Destroy', "#{offer_variant}?#{@params}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Offer Variant', new_offer_variant_path %>
+<%= link_to 'New Offer Variant', "#{new_offer_variant_path}?#{@params}" %>

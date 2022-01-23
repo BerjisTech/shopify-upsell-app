@@ -2,4 +2,4 @@
 
 <%= render 'form', auto_collection: @auto_collection %>
 
-<%= link_to 'Back', auto_collections_path %>
+<%= link_to 'Back', "#{auto_collections_path}?#{@params}" %>

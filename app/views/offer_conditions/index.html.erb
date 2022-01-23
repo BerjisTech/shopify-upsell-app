@@ -32,9 +32,9 @@
         <td><%= offer_condition.variant_id %></td>
         <td><%= offer_condition.amount %></td>
         <td><%= offer_condition.country %></td>
-        <td><%= link_to 'Show', offer_condition %></td>
-        <td><%= link_to 'Edit', edit_offer_condition_path(offer_condition) %></td>
-        <td><%= link_to 'Destroy', offer_condition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', "#{offer_condition}?#{@params}" %></td>
+        <td><%= link_to 'Edit', "#{edit_offer_condition_path(offer_condition)}?#{@params}" %></td>
+        <td><%= link_to 'Destroy', "#{offer_condition}?#{@params}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Offer Condition', new_offer_condition_path %>
+<%= link_to 'New Offer Condition', "#{new_offer_condition_path}?#{@params}" %>

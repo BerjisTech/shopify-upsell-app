@@ -26,9 +26,9 @@
         <td><%= custom_field.placeholder %></td>
         <td><%= custom_field.price %></td>
         <td><%= custom_field.required %></td>
-        <td><%= link_to 'Show', custom_field %></td>
-        <td><%= link_to 'Edit', edit_custom_field_path(custom_field) %></td>
-        <td><%= link_to 'Destroy', custom_field, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', "#{custom_field}?#{@params}" %></td>
+        <td><%= link_to 'Edit', "#{edit_custom_field_path(custom_field)}?#{@params}" %></td>
+        <td><%= link_to 'Destroy', "#{custom_field}?#{@params}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Custom Field', new_custom_field_path %>
+<%= link_to 'New Custom Field', "#{new_custom_field_path}?#{@params}" %>

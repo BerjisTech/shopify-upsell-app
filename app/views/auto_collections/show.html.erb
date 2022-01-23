@@ -90,5 +90,5 @@
   <%= @auto_collection.same_vendor %>
 </p>
 
-<%= link_to 'Edit', edit_auto_collection_path(@auto_collection) %> |
-<%= link_to 'Back', auto_collections_path %>
+<%= link_to 'Edit', "#{edit_auto_collection_path(@auto_collection)}?#{@params}" %> |
+<%= link_to 'Back', "#{auto_collections_path}?#{@params}" %>

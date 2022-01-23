@@ -2,5 +2,5 @@
 
 <%= render 'form', offer_variant: @offer_variant %>
 
-<%= link_to 'Show', @offer_variant %> |
-<%= link_to 'Back', offer_variants_path %>
+<%= link_to 'Show', "#{@offer_variant}?#{@params}" %> |
+<%= link_to 'Back', "#{offer_variants_path}?#{@params}" %>

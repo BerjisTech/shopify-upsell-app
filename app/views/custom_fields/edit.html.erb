@@ -2,5 +2,5 @@
 
 <%= render 'form', custom_field: @custom_field %>
 
-<%= link_to 'Show', @custom_field %> |
-<%= link_to 'Back', custom_fields_path %>
+<%= link_to 'Show', "#{@custom_field}?#{@params}" %> |
+<%= link_to 'Back', "#{custom_fields_path}?#{@params}" %>

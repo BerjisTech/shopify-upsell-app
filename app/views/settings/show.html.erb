@@ -220,5 +220,5 @@
   <%= @setting.override %>
 </p>
 
-<%= link_to 'Edit', edit_setting_path(@setting) %> |
-<%= link_to 'Back', settings_path %>
+<%= link_to 'Edit', "#{edit_setting_path(@setting)}?#{@params}" %> |
+<%= link_to 'Back', "#{settings_path}?#{@params}" %>

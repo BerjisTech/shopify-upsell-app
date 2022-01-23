@@ -2,5 +2,5 @@
 
 <%= render 'form', auto_collection: @auto_collection %>
 
-<%= link_to 'Show', @auto_collection %> |
-<%= link_to 'Back', auto_collections_path %>
+<%= link_to 'Show', "#{@auto_collection}?#{@params}" %> |
+<%= link_to 'Back', "#{auto_collections_path}?#{@params}" %>

@@ -44,9 +44,9 @@
         <td><%= offer.text %></td>
         <td><%= offer.atc %></td>
         <td><%= offer.close %></td>
-        <td><%= link_to 'Show', offer %></td>
-        <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
-        <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', "#{offer}?#{@params}" %></td>
+        <td><%= link_to 'Edit', "#{edit_offer_path(offer)}?#{@params}" %></td>
+        <td><%= link_to 'Destroy', "#{offer}?#{@params}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -54,4 +54,4 @@
 
 <br>
 
-<%= link_to 'New Offer', new_offer_path %>
+<%= link_to 'New Offer', "#{new_offer_path}?#{@params}" %>

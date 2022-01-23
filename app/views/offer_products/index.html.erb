@@ -44,9 +44,9 @@
         <td><%= offer_product.ab_atc %></td>
         <td><%= offer_product.replacement_product %></td>
         <td><%= offer_product.replacement_variant %></td>
-        <td><%= link_to 'Show', offer_product %></td>
-        <td><%= link_to 'Edit', edit_offer_product_path(offer_product) %></td>
-        <td><%= link_to 'Destroy', offer_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', "#{offer_product}?#{@params}" %></td>
+        <td><%= link_to 'Edit', "#{edit_offer_product_path(offer_product)}?#{@params}" %></td>
+        <td><%= link_to 'Destroy', "#{offer_product}?#{@params}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -54,4 +54,4 @@
 
 <br>
 
-<%= link_to 'New Offer Product', new_offer_product_path %>
+<%= link_to 'New Offer Product', "#{new_offer_product_path}?#{@params}" %>

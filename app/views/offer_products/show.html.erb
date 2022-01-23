@@ -80,5 +80,5 @@
   <%= @offer_product.replacement_variant %>
 </p>
 
-<%= link_to 'Edit', edit_offer_product_path(@offer_product) %> |
-<%= link_to 'Back', offer_products_path %>
+<%= link_to 'Edit', "#{edit_offer_product_path(@offer_product)}?#{@params}" %> |
+<%= link_to 'Back', "#{offer_products_path}?#{@params}" %>

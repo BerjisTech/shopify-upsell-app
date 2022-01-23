@@ -48,9 +48,9 @@
         <td><%= auto_collection.title %></td>
         <td><%= auto_collection.text %></td>
         <td><%= auto_collection.same_vendor %></td>
-        <td><%= link_to 'Show', auto_collection %></td>
-        <td><%= link_to 'Edit', edit_auto_collection_path(auto_collection) %></td>
-        <td><%= link_to 'Destroy', auto_collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', "#{auto_collection}?#{@params}" %></td>
+        <td><%= link_to 'Edit', "#{edit_auto_collection_path(auto_collection)}?#{@params}" %></td>
+        <td><%= link_to 'Destroy', "#{auto_collection}?#{@params}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -58,4 +58,4 @@
 
 <br>
 
-<%= link_to 'New Auto Collection', new_auto_collection_path %>
+<%= link_to 'New Auto Collection', "#{new_auto_collection_path}?#{@params}" %>

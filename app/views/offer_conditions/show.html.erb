@@ -50,5 +50,5 @@
   <%= @offer_condition.country %>
 </p>
 
-<%= link_to 'Edit', edit_offer_condition_path(@offer_condition) %> |
-<%= link_to 'Back', offer_conditions_path %>
+<%= link_to 'Edit', "#{edit_offer_condition_path(@offer_condition)}?#{@params}" %> |
+<%= link_to 'Back', "#{offer_conditions_path}?#{@params}" %>

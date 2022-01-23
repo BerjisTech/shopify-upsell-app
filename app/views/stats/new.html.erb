@@ -2,4 +2,4 @@
 
 <%= render 'form', stat: @stat %>
 
-<%= link_to 'Back', stats_path %>
+<%= link_to 'Back', "#{stats_path}?#{@params}" %>

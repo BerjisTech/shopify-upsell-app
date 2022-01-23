@@ -25,5 +25,5 @@
   <%= @custom_field_choice.value %>
 </p>
 
-<%= link_to 'Edit', edit_custom_field_choice_path(@custom_field_choice) %> |
-<%= link_to 'Back', custom_field_choices_path %>
+<%= link_to 'Edit', "#{edit_custom_field_choice_path(@custom_field_choice)}?#{@params}" %> |
+<%= link_to 'Back', "#{custom_field_choices_path}?#{@params}" %>

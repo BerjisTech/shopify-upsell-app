@@ -2,4 +2,4 @@
 
 <%= render 'form', custom_field_choice: @custom_field_choice %>
 
-<%= link_to 'Back', custom_field_choices_path %>
+<%= link_to 'Back', "#{custom_field_choices_path}?#{@params}" %>

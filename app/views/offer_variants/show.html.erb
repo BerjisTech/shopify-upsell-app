@@ -15,5 +15,5 @@
   <%= @offer_variant.variant %>
 </p>
 
-<%= link_to 'Edit', edit_offer_variant_path(@offer_variant) %> |
-<%= link_to 'Back', offer_variants_path %>
+<%= link_to 'Edit', "#{edit_offer_variant_path(@offer_variant)}?#{@params}" %> |
+<%= link_to 'Back', "#{offer_variants_path}?#{@params}" %>
