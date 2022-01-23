@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Auto Collections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shop</th>
+      <th>Layout</th>
+      <th>Close</th>
+      <th>Atc</th>
+      <th>Show title</th>
+      <th>Show price</th>
+      <th>Show image</th>
+      <th>Variant price</th>
+      <th>Compare price</th>
+      <th>Quantity select</th>
+      <th>Has discount</th>
+      <th>Discount code</th>
+      <th>To checkout</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Same vendor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @auto_collections.each do |auto_collection| %>
+      <tr>
+        <td><%= auto_collection.shop_id %></td>
+        <td><%= auto_collection.layout %></td>
+        <td><%= auto_collection.close %></td>
+        <td><%= auto_collection.atc %></td>
+        <td><%= auto_collection.show_title %></td>
+        <td><%= auto_collection.show_price %></td>
+        <td><%= auto_collection.show_image %></td>
+        <td><%= auto_collection.variant_price %></td>
+        <td><%= auto_collection.compare_price %></td>
+        <td><%= auto_collection.quantity_select %></td>
+        <td><%= auto_collection.has_discount %></td>
+        <td><%= auto_collection.discount_code %></td>
+        <td><%= auto_collection.to_checkout %></td>
+        <td><%= auto_collection.date %></td>
+        <td><%= auto_collection.status %></td>
+        <td><%= auto_collection.title %></td>
+        <td><%= auto_collection.text %></td>
+        <td><%= auto_collection.same_vendor %></td>
+        <td><%= link_to 'Show', auto_collection %></td>
+        <td><%= link_to 'Edit', edit_auto_collection_path(auto_collection) %></td>
+        <td><%= link_to 'Destroy', auto_collection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Auto Collection', new_auto_collection_path %>

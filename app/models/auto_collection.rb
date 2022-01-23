@@ -1,0 +1,2 @@
+class AutoCollection < ApplicationRecord
+end

@@ -1,0 +1,107 @@
+<%= form_with(model: auto_collection) do |form| %>
+  <% if auto_collection.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(auto_collection.errors.count, "error") %> prohibited this auto_collection from being saved:</h2>
+
+      <ul>
+        <% auto_collection.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :shop_id %>
+    <%= form.number_field :shop_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layout %>
+    <%= form.text_field :layout %>
+  </div>
+
+  <div class="field">
+    <%= form.label :close %>
+    <%= form.text_field :close %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atc %>
+    <%= form.text_field :atc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_title %>
+    <%= form.text_field :show_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_price %>
+    <%= form.text_field :show_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_image %>
+    <%= form.text_field :show_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variant_price %>
+    <%= form.text_field :variant_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :compare_price %>
+    <%= form.text_field :compare_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity_select %>
+    <%= form.text_field :quantity_select %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_discount %>
+    <%= form.text_field :has_discount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :discount_code %>
+    <%= form.text_field :discount_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to_checkout %>
+    <%= form.text_field :to_checkout %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_field :text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :same_vendor %>
+    <%= form.text_field :same_vendor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

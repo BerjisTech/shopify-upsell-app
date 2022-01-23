@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @offer_condition.offer_id %>
+</p>
+
+<p>
+  <strong>Block:</strong>
+  <%= @offer_condition.block_id %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @offer_condition.condition_id %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @offer_condition.quantity %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @offer_condition.level %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @offer_condition.content %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @offer_condition.product_id %>
+</p>
+
+<p>
+  <strong>Variant:</strong>
+  <%= @offer_condition.variant_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @offer_condition.amount %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @offer_condition.country %>
+</p>
+
+<%= link_to 'Edit', edit_offer_condition_path(@offer_condition) %> |
+<%= link_to 'Back', offer_conditions_path %>

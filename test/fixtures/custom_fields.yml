@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer_id: 1
+  product_id: 1
+  field_type: MyString
+  name: MyString
+  placeholder: MyString
+  price: MyString
+  required: MyString
+
+two:
+  offer_id: 1
+  product_id: 1
+  field_type: MyString
+  name: MyString
+  placeholder: MyString
+  price: MyString
+  required: MyString

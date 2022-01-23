@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @condition_block.offer_id %>
+</p>
+
+<p>
+  <strong>Rule:</strong>
+  <%= @condition_block.rule %>
+</p>
+
+<%= link_to 'Edit', edit_condition_block_path(@condition_block) %> |
+<%= link_to 'Back', condition_blocks_path %>

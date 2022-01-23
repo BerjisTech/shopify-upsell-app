@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer_id: 1
+  block_id: 1
+  condition_id: 1
+  quantity: MyString
+  level: MyString
+  content: MyString
+  product_id: 1
+  variant_id: 1
+  amount: MyString
+  country: MyString
+
+two:
+  offer_id: 1
+  block_id: 1
+  condition_id: 1
+  quantity: MyString
+  level: MyString
+  content: MyString
+  product_id: 1
+  variant_id: 1
+  amount: MyString
+  country: MyString

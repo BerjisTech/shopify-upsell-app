@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  shop_id: 1
+  offer_id: 1
+  product: MyString
+  variant: MyString
+  quantity: MyString
+  ip: MyString
+  country: MyString
+  type: 
+  action: MyString
+  page: MyString
+  position_on_page: MyString
+  device: MyString
+  browser: MyString
+  cart_items: MyString
+  price: MyString
+
+two:
+  date: MyString
+  shop_id: 1
+  offer_id: 1
+  product: MyString
+  variant: MyString
+  quantity: MyString
+  ip: MyString
+  country: MyString
+  type: 
+  action: MyString
+  page: MyString
+  position_on_page: MyString
+  device: MyString
+  browser: MyString
+  cart_items: MyString
+  price: MyString

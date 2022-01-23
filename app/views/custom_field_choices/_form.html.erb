@@ -1,0 +1,42 @@
+<%= form_with(model: custom_field_choice) do |form| %>
+  <% if custom_field_choice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(custom_field_choice.errors.count, "error") %> prohibited this custom_field_choice from being saved:</h2>
+
+      <ul>
+        <% custom_field_choice.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :custom_field_id %>
+    <%= form.number_field :custom_field_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offer_id %>
+    <%= form.number_field :offer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.number_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

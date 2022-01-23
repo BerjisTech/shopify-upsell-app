@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @offer.shop_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @offer.date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @offer.title %>
+</p>
+
+<p>
+  <strong>Scheme:</strong>
+  <%= @offer.scheme %>
+</p>
+
+<p>
+  <strong>Stop show:</strong>
+  <%= @offer.stop_show %>
+</p>
+
+<p>
+  <strong>Layout:</strong>
+  <%= @offer.layout %>
+</p>
+
+<p>
+  <strong>Required checkout:</strong>
+  <%= @offer.required_checkout %>
+</p>
+
+<p>
+  <strong>Has discount:</strong>
+  <%= @offer.has_discount %>
+</p>
+
+<p>
+  <strong>Discount code:</strong>
+  <%= @offer.discount_code %>
+</p>
+
+<p>
+  <strong>General block rule:</strong>
+  <%= @offer.general_block_rule %>
+</p>
+
+<p>
+  <strong>To checkout:</strong>
+  <%= @offer.to_checkout %>
+</p>
+
+<p>
+  <strong>Auto add:</strong>
+  <%= @offer.auto_add %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @offer.status %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @offer.text %>
+</p>
+
+<p>
+  <strong>Atc:</strong>
+  <%= @offer.atc %>
+</p>
+
+<p>
+  <strong>Close:</strong>
+  <%= @offer.close %>
+</p>
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>

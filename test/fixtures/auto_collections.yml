@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shop_id: 1
+  layout: MyString
+  close: MyString
+  atc: MyString
+  show_title: MyString
+  show_price: MyString
+  show_image: MyString
+  variant_price: MyString
+  compare_price: MyString
+  quantity_select: MyString
+  has_discount: MyString
+  discount_code: MyString
+  to_checkout: MyString
+  date: 2022-01-23 11:58:36
+  status: MyString
+  title: MyString
+  text: MyString
+  same_vendor: MyString
+
+two:
+  shop_id: 1
+  layout: MyString
+  close: MyString
+  atc: MyString
+  show_title: MyString
+  show_price: MyString
+  show_image: MyString
+  variant_price: MyString
+  compare_price: MyString
+  quantity_select: MyString
+  has_discount: MyString
+  discount_code: MyString
+  to_checkout: MyString
+  date: 2022-01-23 11:58:36
+  status: MyString
+  title: MyString
+  text: MyString
+  same_vendor: MyString

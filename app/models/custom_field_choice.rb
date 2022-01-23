@@ -1,0 +1,2 @@
+class CustomFieldChoice < ApplicationRecord
+end

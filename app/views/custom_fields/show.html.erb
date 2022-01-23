@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @custom_field.offer_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @custom_field.product_id %>
+</p>
+
+<p>
+  <strong>Field type:</strong>
+  <%= @custom_field.field_type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @custom_field.name %>
+</p>
+
+<p>
+  <strong>Placeholder:</strong>
+  <%= @custom_field.placeholder %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @custom_field.price %>
+</p>
+
+<p>
+  <strong>Required:</strong>
+  <%= @custom_field.required %>
+</p>
+
+<%= link_to 'Edit', edit_custom_field_path(@custom_field) %> |
+<%= link_to 'Back', custom_fields_path %>

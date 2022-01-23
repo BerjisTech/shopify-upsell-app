@@ -1,0 +1,27 @@
+<%= form_with(model: condition_block) do |form| %>
+  <% if condition_block.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(condition_block.errors.count, "error") %> prohibited this condition_block from being saved:</h2>
+
+      <ul>
+        <% condition_block.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :offer_id %>
+    <%= form.number_field :offer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rule %>
+    <%= form.text_area :rule %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

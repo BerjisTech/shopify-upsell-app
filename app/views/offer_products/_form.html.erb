@@ -1,0 +1,97 @@
+<%= form_with(model: offer_product) do |form| %>
+  <% if offer_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(offer_product.errors.count, "error") %> prohibited this offer_product from being saved:</h2>
+
+      <ul>
+        <% offer_product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :offer_id %>
+    <%= form.number_field :offer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shop_id %>
+    <%= form.number_field :shop_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_field :text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :atc %>
+    <%= form.text_field :atc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_title %>
+    <%= form.text_field :show_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_price %>
+    <%= form.text_field :show_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :show_image %>
+    <%= form.text_field :show_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variant_price %>
+    <%= form.text_field :variant_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :compare_price %>
+    <%= form.text_field :compare_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linked %>
+    <%= form.text_field :linked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity_select %>
+    <%= form.text_field :quantity_select %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ab_test %>
+    <%= form.text_field :ab_test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ab_text %>
+    <%= form.text_field :ab_text %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ab_atc %>
+    <%= form.text_field :ab_atc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement_product %>
+    <%= form.text_field :replacement_product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :replacement_variant %>
+    <%= form.text_field :replacement_variant %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

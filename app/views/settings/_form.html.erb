@@ -1,0 +1,237 @@
+<%= form_with(model: setting) do |form| %>
+  <% if setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(setting.errors.count, "error") %> prohibited this setting from being saved:</h2>
+
+      <ul>
+        <% setting.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :shop_id %>
+    <%= form.number_field :shop_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cart_location %>
+    <%= form.text_field :cart_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cart_position %>
+    <%= form.text_field :cart_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drawer_location %>
+    <%= form.text_field :drawer_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drawer_position %>
+    <%= form.text_field :drawer_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :refresh_state %>
+    <%= form.text_field :refresh_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drawer_refresh %>
+    <%= form.text_field :drawer_refresh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layout_bg %>
+    <%= form.text_field :layout_bg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layout_color %>
+    <%= form.text_field :layout_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layout_font %>
+    <%= form.text_field :layout_font %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layout_size %>
+    <%= form.text_field :layout_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layout_mt %>
+    <%= form.text_field :layout_mt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :layout_mb %>
+    <%= form.text_field :layout_mb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offer_radius %>
+    <%= form.text_field :offer_radius %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offer_bs %>
+    <%= form.text_field :offer_bs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offer_bc %>
+    <%= form.text_field :offer_bc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :offer_border %>
+    <%= form.text_field :offer_border %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_bg %>
+    <%= form.text_field :button_bg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_color %>
+    <%= form.text_field :button_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_font %>
+    <%= form.text_field :button_font %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_size %>
+    <%= form.text_field :button_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_mt %>
+    <%= form.text_field :button_mt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_mb %>
+    <%= form.text_field :button_mb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_radius %>
+    <%= form.text_field :button_radius %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_bs %>
+    <%= form.text_field :button_bs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_bc %>
+    <%= form.text_field :button_bc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :button_border %>
+    <%= form.text_field :button_border %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_size %>
+    <%= form.text_field :image_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_radius %>
+    <%= form.text_field :image_radius %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_bs %>
+    <%= form.text_field :image_bs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_bc %>
+    <%= form.text_field :image_bc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_border %>
+    <%= form.text_field :image_border %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text_color %>
+    <%= form.text_field :text_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text_font %>
+    <%= form.text_field :text_font %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text_size %>
+    <%= form.text_field :text_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title_color %>
+    <%= form.text_field :title_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title_font %>
+    <%= form.text_field :title_font %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title_size %>
+    <%= form.text_field :title_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_color %>
+    <%= form.text_field :price_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_price_color %>
+    <%= form.text_field :c_price_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_font %>
+    <%= form.text_field :price_font %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_size %>
+    <%= form.text_field :price_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :c_price_size %>
+    <%= form.text_field :c_price_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :override %>
+    <%= form.text_area :override %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

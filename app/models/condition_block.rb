@@ -1,0 +1,2 @@
+class ConditionBlock < ApplicationRecord
+end

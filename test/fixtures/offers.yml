@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shop_id: 1
+  date: 2022-01-23 11:39:17
+  title: MyString
+  scheme: MyString
+  stop_show: MyString
+  layout: MyString
+  required_checkout: MyString
+  has_discount: MyString
+  discount_code: MyString
+  general_block_rule: MyString
+  to_checkout: MyString
+  auto_add: MyString
+  status: MyString
+  text: MyString
+  atc: MyString
+  close: MyString
+
+two:
+  shop_id: 1
+  date: 2022-01-23 11:39:17
+  title: MyString
+  scheme: MyString
+  stop_show: MyString
+  layout: MyString
+  required_checkout: MyString
+  has_discount: MyString
+  discount_code: MyString
+  general_block_rule: MyString
+  to_checkout: MyString
+  auto_add: MyString
+  status: MyString
+  text: MyString
+  atc: MyString
+  close: MyString

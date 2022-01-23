@@ -1,0 +1,2 @@
+class OfferVariant < ApplicationRecord
+end

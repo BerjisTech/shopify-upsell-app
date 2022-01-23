@@ -1,0 +1,2 @@
+module OfferConditionsHelper
+end

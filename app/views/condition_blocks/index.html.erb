@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Condition Blocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Offer</th>
+      <th>Rule</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @condition_blocks.each do |condition_block| %>
+      <tr>
+        <td><%= condition_block.offer_id %></td>
+        <td><%= condition_block.rule %></td>
+        <td><%= link_to 'Show', condition_block %></td>
+        <td><%= link_to 'Edit', edit_condition_block_path(condition_block) %></td>
+        <td><%= link_to 'Destroy', condition_block, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Condition Block', new_condition_block_path %>

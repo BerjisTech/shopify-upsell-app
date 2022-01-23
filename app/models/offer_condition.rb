@@ -1,0 +1,2 @@
+class OfferCondition < ApplicationRecord
+end

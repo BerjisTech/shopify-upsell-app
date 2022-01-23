@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @offer_product.offer_id %>
+</p>
+
+<p>
+  <strong>Shop:</strong>
+  <%= @offer_product.shop_id %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @offer_product.text %>
+</p>
+
+<p>
+  <strong>Atc:</strong>
+  <%= @offer_product.atc %>
+</p>
+
+<p>
+  <strong>Show title:</strong>
+  <%= @offer_product.show_title %>
+</p>
+
+<p>
+  <strong>Show price:</strong>
+  <%= @offer_product.show_price %>
+</p>
+
+<p>
+  <strong>Show image:</strong>
+  <%= @offer_product.show_image %>
+</p>
+
+<p>
+  <strong>Variant price:</strong>
+  <%= @offer_product.variant_price %>
+</p>
+
+<p>
+  <strong>Compare price:</strong>
+  <%= @offer_product.compare_price %>
+</p>
+
+<p>
+  <strong>Linked:</strong>
+  <%= @offer_product.linked %>
+</p>
+
+<p>
+  <strong>Quantity select:</strong>
+  <%= @offer_product.quantity_select %>
+</p>
+
+<p>
+  <strong>Ab test:</strong>
+  <%= @offer_product.ab_test %>
+</p>
+
+<p>
+  <strong>Ab text:</strong>
+  <%= @offer_product.ab_text %>
+</p>
+
+<p>
+  <strong>Ab atc:</strong>
+  <%= @offer_product.ab_atc %>
+</p>
+
+<p>
+  <strong>Replacement product:</strong>
+  <%= @offer_product.replacement_product %>
+</p>
+
+<p>
+  <strong>Replacement variant:</strong>
+  <%= @offer_product.replacement_variant %>
+</p>
+
+<%= link_to 'Edit', edit_offer_product_path(@offer_product) %> |
+<%= link_to 'Back', offer_products_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Custom Field Choices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Custom field</th>
+      <th>Offer</th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custom_field_choices.each do |custom_field_choice| %>
+      <tr>
+        <td><%= custom_field_choice.custom_field_id %></td>
+        <td><%= custom_field_choice.offer_id %></td>
+        <td><%= custom_field_choice.product_id %></td>
+        <td><%= custom_field_choice.price %></td>
+        <td><%= custom_field_choice.value %></td>
+        <td><%= link_to 'Show', custom_field_choice %></td>
+        <td><%= link_to 'Edit', edit_custom_field_choice_path(custom_field_choice) %></td>
+        <td><%= link_to 'Destroy', custom_field_choice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custom Field Choice', new_custom_field_choice_path %>
