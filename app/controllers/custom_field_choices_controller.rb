@@ -5,7 +5,7 @@ class CustomFieldChoicesController < ApplicationController
   include ShopifyApp::RequireKnownShop
   include ShopifyApp::ShopAccessScopesVerification
 
-  before_action :set_custom_field_choices, only: %i[ show edit update destroy ]
+  before_action :set_custom_field_choices, only: %i[show edit update destroy]
 
   # GET /custom_field_choices or /custom_field_choices.json
   def index
@@ -13,8 +13,7 @@ class CustomFieldChoicesController < ApplicationController
   end
 
   # GET /custom_field_choices/1 or /custom_field_choices/1.json
-  def show
-  end
+  def show; end
 
   # GET /custom_field_choices/new
   def new
@@ -22,8 +21,7 @@ class CustomFieldChoicesController < ApplicationController
   end
 
   # GET /custom_field_choices/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /custom_field_choices or /custom_field_choices.json
   def create
@@ -31,7 +29,10 @@ class CustomFieldChoicesController < ApplicationController
 
     respond_to do |format|
       if @custom_field_choice.save
-        format.html { redirect_to custom_field_choice_url(@custom_field_choices), notice: "custom_field_choices was successfully created." }
+        format.html do
+          redirect_to custom_field_choice_url(@custom_field_choices),
+                      notice: 'custom_field_choices was successfully created.'
+        end
         format.json { render :show, status: :created, location: @custom_field_choices }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -44,7 +45,10 @@ class CustomFieldChoicesController < ApplicationController
   def update
     respond_to do |format|
       if @custom_field_choice.update(custom_field_choice_params)
-        format.html { redirect_to custom_field_choice_url(@custom_field_choices), notice: "custom_field_choices was successfully updated." }
+        format.html do
+          redirect_to custom_field_choice_url(@custom_field_choices),
+                      notice: 'custom_field_choices was successfully updated.'
+        end
         format.json { render :show, status: :ok, location: @custom_field_choices }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,16 +62,17 @@ class CustomFieldChoicesController < ApplicationController
     @custom_field_choice.destroy
 
     respond_to do |format|
-      format.html { redirect_to custom_field_choices_url, notice: "custom_field_choices was successfully destroyed." }
+      format.html { redirect_to custom_field_choices_url, notice: 'custom_field_choices was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_custom_field_choices
-      @custom_field_choices = CustomFieldChoice.find(params[:id])
-    end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_custom_field_choices
+    @custom_field_choices = CustomFieldChoice.find(params[:id])
+  end
 
   def custom_field_choice_params
     params.require(:custom_field_choice).permit(:custom_field_id, :offer_id, :product_id, :price, :value)

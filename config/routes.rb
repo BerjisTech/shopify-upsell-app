@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :conditions
   resources :offers
   root to: 'offers#index'
-  
+
   get 'products', controller: :products, action: :index
   get 'help', controller: :helps, action: :index
   get 'feature/request', controller: :features, action: :new, as: :feature_request

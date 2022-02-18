@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class HelpsController < ApplicationController
   include ShopifyApp::EmbeddedApp
   include ShopifyApp::RequireKnownShop
   include ShopifyApp::ShopAccessScopesVerification
-  
-  before_action :set_help, only: %i[ show edit update destroy ]
+
+  before_action :set_help, only: %i[show edit update destroy]
 
   # GET /helps or /helps.json
   def index
@@ -11,8 +13,7 @@ class HelpsController < ApplicationController
   end
 
   # GET /helps/1 or /helps/1.json
-  def show
-  end
+  def show; end
 
   # GET /helps/new
   def new
@@ -20,8 +21,7 @@ class HelpsController < ApplicationController
   end
 
   # GET /helps/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /helps or /helps.json
   def create
@@ -29,7 +29,7 @@ class HelpsController < ApplicationController
 
     respond_to do |format|
       if @help.save
-        format.html { redirect_to help_url(@help), notice: "Help was successfully created." }
+        format.html { redirect_to help_url(@help), notice: 'Help was successfully created.' }
         format.json { render :show, status: :created, location: @help }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -42,7 +42,7 @@ class HelpsController < ApplicationController
   def update
     respond_to do |format|
       if @help.update(help_params)
-        format.html { redirect_to help_url(@help), notice: "Help was successfully updated." }
+        format.html { redirect_to help_url(@help), notice: 'Help was successfully updated.' }
         format.json { render :show, status: :ok, location: @help }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -56,19 +56,20 @@ class HelpsController < ApplicationController
     @help.destroy
 
     respond_to do |format|
-      format.html { redirect_to helps_url, notice: "Help was successfully destroyed." }
+      format.html { redirect_to helps_url, notice: 'Help was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_help
-      @help = Help.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def help_params
-      params.fetch(:help, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_help
+    @help = Help.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def help_params
+    params.fetch(:help, {})
+  end
 end

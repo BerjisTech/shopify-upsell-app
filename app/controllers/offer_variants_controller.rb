@@ -5,7 +5,7 @@ class OfferVariantsController < ApplicationController
   include ShopifyApp::RequireKnownShop
   include ShopifyApp::ShopAccessScopesVerification
 
-  before_action :set_offer_variant, only: %i[ show edit update destroy ]
+  before_action :set_offer_variant, only: %i[show edit update destroy]
 
   # GET /offer_variants or /offer_variants.json
   def index
@@ -13,8 +13,7 @@ class OfferVariantsController < ApplicationController
   end
 
   # GET /offer_variants/1 or /offer_variants/1.json
-  def show
-  end
+  def show; end
 
   # GET /offer_variants/new
   def new
@@ -22,8 +21,7 @@ class OfferVariantsController < ApplicationController
   end
 
   # GET /offer_variants/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /offer_variants or /offer_variants.json
   def create
@@ -31,7 +29,7 @@ class OfferVariantsController < ApplicationController
 
     respond_to do |format|
       if @offer_variant.save
-        format.html { redirect_to offer_variant_url(@offer_variant), notice: "Offer variant was successfully created." }
+        format.html { redirect_to offer_variant_url(@offer_variant), notice: 'Offer variant was successfully created.' }
         format.json { render :show, status: :created, location: @offer_variant }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -44,7 +42,7 @@ class OfferVariantsController < ApplicationController
   def update
     respond_to do |format|
       if @offer_variant.update(offer_variant_params)
-        format.html { redirect_to offer_variant_url(@offer_variant), notice: "Offer variant was successfully updated." }
+        format.html { redirect_to offer_variant_url(@offer_variant), notice: 'Offer variant was successfully updated.' }
         format.json { render :show, status: :ok, location: @offer_variant }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,16 +56,17 @@ class OfferVariantsController < ApplicationController
     @offer_variant.destroy
 
     respond_to do |format|
-      format.html { redirect_to offer_variants_url, notice: "Offer variant was successfully destroyed." }
+      format.html { redirect_to offer_variants_url, notice: 'Offer variant was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_offer_variant
-      @offer_variant = OfferVariant.find(params[:id])
-    end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_offer_variant
+    @offer_variant = OfferVariant.find(params[:id])
+  end
 
   def offer_variant_params
     params.require(:offer_variant).permit(:offer_id, :product, :variant)

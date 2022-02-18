@@ -5,7 +5,7 @@ class OfferProductsController < ApplicationController
   include ShopifyApp::RequireKnownShop
   include ShopifyApp::ShopAccessScopesVerification
 
-  before_action :set_offer_product, only: %i[ show edit update destroy ]
+  before_action :set_offer_product, only: %i[show edit update destroy]
 
   # GET /offer_products or /offer_products.json
   def index
@@ -13,8 +13,7 @@ class OfferProductsController < ApplicationController
   end
 
   # GET /offer_products/1 or /offer_products/1.json
-  def show
-  end
+  def show; end
 
   # GET /offer_products/new
   def new
@@ -22,8 +21,7 @@ class OfferProductsController < ApplicationController
   end
 
   # GET /offer_products/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /offer_products or /offer_products.json
   def create
@@ -31,7 +29,7 @@ class OfferProductsController < ApplicationController
 
     respond_to do |format|
       if @offer_product.save
-        format.html { redirect_to offer_product_url(@offer_product), notice: "Offer product was successfully created." }
+        format.html { redirect_to offer_product_url(@offer_product), notice: 'Offer product was successfully created.' }
         format.json { render :show, status: :created, location: @offer_product }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -44,7 +42,7 @@ class OfferProductsController < ApplicationController
   def update
     respond_to do |format|
       if @offer_product.update(offer_product_params)
-        format.html { redirect_to offer_product_url(@offer_product), notice: "Offer product was successfully updated." }
+        format.html { redirect_to offer_product_url(@offer_product), notice: 'Offer product was successfully updated.' }
         format.json { render :show, status: :ok, location: @offer_product }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,16 +56,17 @@ class OfferProductsController < ApplicationController
     @offer_product.destroy
 
     respond_to do |format|
-      format.html { redirect_to offer_products_url, notice: "Offer product was successfully destroyed." }
+      format.html { redirect_to offer_products_url, notice: 'Offer product was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_offer_product
-      @offer_product = OfferProduct.find(params[:id])
-    end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_offer_product
+    @offer_product = OfferProduct.find(params[:id])
+  end
 
   def offer_product_params
     params.require(:offer_product).permit(:offer_id, :shop_id, :text, :atc, :show_title, :show_price, :show_image,

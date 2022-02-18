@@ -1,1 +1,3 @@
-json.partial! "helps/help", help: @help
+# frozen_string_literal: true
+
+json.partial! 'helps/help', help: @help

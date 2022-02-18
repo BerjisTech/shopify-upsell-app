@@ -9,6 +9,7 @@ ruby '3.0.1'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -27,9 +28,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'dotenv-rails'
+gem 'htmlbeautifier'
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'rubocop'
 gem 'shopify_api'
-gem 'htmlbeautifier'
+gem 'shopify_app'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

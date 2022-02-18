@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'omniauth'
 
 Rails.application.config.middleware.use(OmniAuth::Builder) do
   provider :shopify,

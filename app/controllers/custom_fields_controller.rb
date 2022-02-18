@@ -5,7 +5,7 @@ class CustomFieldsController < ApplicationController
   include ShopifyApp::RequireKnownShop
   include ShopifyApp::ShopAccessScopesVerification
 
-  before_action :set_custom_field, only: %i[ show edit update destroy ]
+  before_action :set_custom_field, only: %i[show edit update destroy]
 
   # GET /custom_fields or /custom_fields.json
   def index
@@ -13,8 +13,7 @@ class CustomFieldsController < ApplicationController
   end
 
   # GET /custom_fields/1 or /custom_fields/1.json
-  def show
-  end
+  def show; end
 
   # GET /custom_fields/new
   def new
@@ -22,8 +21,7 @@ class CustomFieldsController < ApplicationController
   end
 
   # GET /custom_fields/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /custom_fields or /custom_fields.json
   def create
@@ -31,7 +29,7 @@ class CustomFieldsController < ApplicationController
 
     respond_to do |format|
       if @custom_field.save
-        format.html { redirect_to custom_field_url(@custom_field), notice: "Custom field was successfully created." }
+        format.html { redirect_to custom_field_url(@custom_field), notice: 'Custom field was successfully created.' }
         format.json { render :show, status: :created, location: @custom_field }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -44,7 +42,7 @@ class CustomFieldsController < ApplicationController
   def update
     respond_to do |format|
       if @custom_field.update(custom_field_params)
-        format.html { redirect_to custom_field_url(@custom_field), notice: "Custom field was successfully updated." }
+        format.html { redirect_to custom_field_url(@custom_field), notice: 'Custom field was successfully updated.' }
         format.json { render :show, status: :ok, location: @custom_field }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,16 +56,17 @@ class CustomFieldsController < ApplicationController
     @custom_field.destroy
 
     respond_to do |format|
-      format.html { redirect_to custom_fields_url, notice: "Custom field was successfully destroyed." }
+      format.html { redirect_to custom_fields_url, notice: 'Custom field was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_custom_field
-      @custom_field = CustomField.find(params[:id])
-    end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_custom_field
+    @custom_field = CustomField.find(params[:id])
+  end
 
   def custom_field_params
     params.require(:custom_field).permit(:offer_id, :product_id, :field_type, :name, :placeholder, :price, :required)

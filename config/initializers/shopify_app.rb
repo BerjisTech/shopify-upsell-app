@@ -3,7 +3,7 @@
 ShopifyApp.configure do |config|
   config.application_name = 'My Shopify App'
   config.old_secret = ''
-  config.scope = ENV.fetch('DEV_SCOPES', '').presence # Consult this page for more scope options:
+  config.scope = ENV.fetch('SCOPES', '').presence # Consult this page for more scope options:
   # https://help.shopify.com/en/api/getting-started/authentication/oauth/scopes
   config.embedded_app = true
   config.after_authenticate_job = false
@@ -17,6 +17,7 @@ ShopifyApp.configure do |config|
 
   config.api_key = ENV.fetch('SHOPIFY_API_KEY', '').presence
   config.secret = ENV.fetch('SHOPIFY_API_SECRET', '').presence
+
   if defined? Rails::Server
     raise('Missing SHOPIFY_API_KEY. See https://github.com/Shopify/shopify_app#requirements') unless config.api_key
     raise('Missing SHOPIFY_API_SECRET. See https://github.com/Shopify/shopify_app#requirements') unless config.secret
