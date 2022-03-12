@@ -15,6 +15,14 @@
  */
 
 html,
-body {
-    background: #F6F6F7;
+body,
+.app-wrapper,
+.app-content,
+.main {
+    background: #F6F6F7 !important;
+}
+
+.shopify_button_green {
+    background: #008060 !important;
+    color     : #ffffff !important;
 }

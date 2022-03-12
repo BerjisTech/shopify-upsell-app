@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'products', controller: :products, action: :index
   get 'help', controller: :helps, action: :index
   get 'feature/request', controller: :features, action: :new, as: :feature_request
+  get 'home', controller: :home, action: :index
   mount ShopifyApp::Engine, at: '/'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

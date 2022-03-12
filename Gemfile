@@ -34,6 +34,8 @@ gem 'omniauth-facebook'
 gem 'rubocop'
 gem 'shopify_api'
 gem 'shopify_app'
+gem 'faraday'
+gem 'faraday_middleware'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

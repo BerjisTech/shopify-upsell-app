@@ -11,87 +11,93 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :shop_id %>
-    <%= form.number_field :shop_id %>
+  <div class="d-flex align-items-center justify-content-end p-2">
+    <button type="submit" class="btn btn-md shopify_button_green">SAVE</span>
+  </div>
+  <div class="bg-white shadow border rounded p-2">
+    <div class="field">
+      <%= form.label :shop_id %>
+      <%= form.text_field :shop_id, value: @active_shop.id %>
+    </div>
+
+    <div class="field">
+      <%= form.label :date %>
+      <%= form.date_field :date %>
+    </div>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div class="field">
+      <%= form.label :scheme %>
+      <%= form.text_field :scheme %>
+    </div>
+
+    <div class="field">
+      <%= form.label :stop_show %>
+      <%= form.text_field :stop_show %>
+    </div>
+
+    <div class="field">
+      <%= form.label :layout %>
+      <%= form.text_field :layout %>
+    </div>
+
+    <div class="field">
+      <%= form.label :required_checkout %>
+      <%= form.text_field :required_checkout %>
+    </div>
+
+    <div class="field">
+      <%= form.label :has_discount %>
+      <%= form.text_field :has_discount %>
+    </div>
+
+    <div class="field">
+      <%= form.label :discount_code %>
+      <%= form.text_field :discount_code %>
+    </div>
+
+    <div class="field">
+      <%= form.label :general_block_rule %>
+      <%= form.text_field :general_block_rule %>
+    </div>
+
+    <div class="field">
+      <%= form.label :to_checkout %>
+      <%= form.text_field :to_checkout %>
+    </div>
+
+    <div class="field">
+      <%= form.label :auto_add %>
+      <%= form.text_field :auto_add %>
+    </div>
+
+    <div class="field">
+      <%= form.label :status %>
+      <%= form.text_field :status %>
+    </div>
+
+    <div class="field">
+      <%= form.label :text %>
+      <%= form.text_field :text %>
+    </div>
+
+    <div class="field">
+      <%= form.label :atc %>
+      <%= form.text_field :atc %>
+    </div>
+
+    <div class="field">
+      <%= form.label :close %>
+      <%= form.text_field :close %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.datetime_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :scheme %>
-    <%= form.text_field :scheme %>
-  </div>
-
-  <div class="field">
-    <%= form.label :stop_show %>
-    <%= form.text_field :stop_show %>
-  </div>
-
-  <div class="field">
-    <%= form.label :layout %>
-    <%= form.text_field :layout %>
-  </div>
-
-  <div class="field">
-    <%= form.label :required_checkout %>
-    <%= form.text_field :required_checkout %>
-  </div>
-
-  <div class="field">
-    <%= form.label :has_discount %>
-    <%= form.text_field :has_discount %>
-  </div>
-
-  <div class="field">
-    <%= form.label :discount_code %>
-    <%= form.text_field :discount_code %>
-  </div>
-
-  <div class="field">
-    <%= form.label :general_block_rule %>
-    <%= form.text_field :general_block_rule %>
-  </div>
-
-  <div class="field">
-    <%= form.label :to_checkout %>
-    <%= form.text_field :to_checkout %>
-  </div>
-
-  <div class="field">
-    <%= form.label :auto_add %>
-    <%= form.text_field :auto_add %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
-  </div>
-
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_field :text %>
-  </div>
-
-  <div class="field">
-    <%= form.label :atc %>
-    <%= form.text_field :atc %>
-  </div>
-
-  <div class="field">
-    <%= form.label :close %>
-    <%= form.text_field :close %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
